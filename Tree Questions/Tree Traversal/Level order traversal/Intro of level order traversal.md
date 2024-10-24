@@ -1,6 +1,6 @@
 Level order traversal involves visiting nodes of a binary tree level by level, from left to right.
 
-## *********************************************B  F   S************************
+## B  F   S 
 
 BFS method is preferred for level order traversal as it aligns with level order traversal goal that is to  explores nodes level by level, from left to right. Although it is not typically suggested to implement it using Depth-First Search (DFS), but it can be done with DFS also by keeping track of levels explicitly
 
@@ -17,7 +17,7 @@ Breadth-First Search (BFS) explores nodes level by level, making it the natural 
     Continue this process until all nodes have been processed.
 
 Code:(LC 102)
-    class Solution {
+    `class Solution {
     public:
         vector<vector<int>> ans;
         vector<vector<int>> levelOrder(TreeNode* root) {
@@ -40,14 +40,15 @@ Code:(LC 102)
             return ans;      
         }
     };
+`
 
+## B  F   S 
 
-
-DFS:(Never use, agar interview mai speciafically pucha tavi use krna)
+# DFS:(Never use, agar interview mai speciafically pucha tavi use krna)
 we can implement level order traversal using a Depth-First Search (DFS) approach by explicitly tracking the depth (or level) of the tree during the recursive traversal.
 
-CODE:
-    void dfs(TreeNode* node, int level, vector<vector<int>>& result) {
+# CODE:
+    `void dfs(TreeNode* node, int level, vector<vector<int>>& result) {
         if (!node) return;
 
     
@@ -69,10 +70,10 @@ CODE:
         vector<vector<int>> result;
         dfs(root, 0, result);  // Start DFS with the root at level 0.
         return result;
-    }
+    }`
 
-EXPLANATION:
-Base Case: 
+# EXPLANATION:
+> Base Case: 
     If the current node is nullptr, return immediately (this happens when you try to access a non-existent left or right child).
 Process Current Node:
     If the current depth equals the size of the result vector (i.e., you are visiting a new level for the first time), append a new empty vector for this level.
