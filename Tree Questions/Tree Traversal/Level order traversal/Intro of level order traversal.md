@@ -1,6 +1,6 @@
 Level order traversal involves visiting nodes of a binary tree level by level, from left to right.
 
-## B  F   S 
+###  B  F   S 
 
 BFS method is preferred for level order traversal as it aligns with level order traversal goal that is to  explores nodes level by level, from left to right. Although it is not typically suggested to implement it using Depth-First Search (DFS), but it can be done with DFS also by keeping track of levels explicitly
 
@@ -16,7 +16,7 @@ Breadth-First Search (BFS) explores nodes level by level, making it the natural 
         Enqueue its left and right children (if they exist).
     Continue this process until all nodes have been processed.
 
-Code:(LC 102)
+# Code:(LC 102)
    
     `class Solution {
      public:
@@ -40,10 +40,32 @@ Code:(LC 102)
             return ans;      
         }
     };`
+*Question mostly BFS se he solve honge. Keep in mind DFS only for exceptional cases.*
+# Question based on BFS level order traversal:
+Here is the consolidated list of **LeetCode problems based on level order traversal** in a table format:
 
-## B  F   S 
+| **No.** | **Problem Name**                                         | **Description**                                                                     | **Link**                                                                                      |
+|--------|----------------------------------------------------------|-------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| 1      | Binary Tree Level Order Traversal                        | Return the level order traversal of a binary tree.                                   | [Link](https://leetcode.com/problems/binary-tree-level-order-traversal/)                      |
+| 2      | Binary Tree Zigzag Level Order Traversal                 | Return the zigzag level order traversal of a binary tree.                            | [Link](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)               |
+| 3      | Binary Tree Right Side View                              | Return the nodes visible from the right side of the binary tree.                     | [Link](https://leetcode.com/problems/binary-tree-right-side-view/)                           |
+| 4      | Average of Levels in Binary Tree                         | Return the average value of the nodes on each level.                                 | [Link](https://leetcode.com/problems/average-of-levels-in-binary-tree/)                      |
+| 5      | Minimum Depth of Binary Tree                             | Find the minimum depth of the binary tree.                                           | [Link](https://leetcode.com/problems/minimum-depth-of-binary-tree/)                          |
+| 6      | Populating Next Right Pointers in Each Node              | Populate each node's next pointer to point to its next right node in a perfect tree. | [Link](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)           |
+| 7      | Binary Tree Vertical Order Traversal                     | Return the vertical order traversal of the binary tree.                              | [Link](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)              |
+| 8      | Cousins in Binary Tree                                   | Determine if two nodes are cousins (same depth but different parents).               | [Link](https://leetcode.com/problems/cousins-in-binary-tree/)                                |
+| 9      | Binary Tree Level Order Traversal II                     | Return the level order traversal from bottom to top.                                 | [Link](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/)                  |
+| 10     | Maximum Depth of Binary Tree                             | Find the maximum depth of the binary tree.                                           | [Link](https://leetcode.com/problems/maximum-depth-of-binary-tree/)                          |
+| 11     | N-ary Tree Level Order Traversal                         | Return the level order traversal of an N-ary tree.                                   | [Link](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)                      |
+| 12     | Symmetric Tree                                           | Check if a tree is symmetric around its center.                                      | [Link](https://leetcode.com/problems/symmetric-tree/)                                        |
 
-# DFS:(Never use, agar interview mai speciafically pucha tavi use krna)
+This table provides a clear view of popular **level order traversal**-based problems on LeetCode along with their descriptions and links to each problem.
+
+
+
+#### D  F   S 
+
+### DFS:(Never use, agar interview mai speciafically pucha tavi use krna)
 we can implement level order traversal using a Depth-First Search (DFS) approach by explicitly tracking the depth (or level) of the tree during the recursive traversal.
 
 # CODE:
