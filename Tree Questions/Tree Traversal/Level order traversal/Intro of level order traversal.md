@@ -32,7 +32,6 @@ Code:(LC 102)
                     TreeNode *parent = q.front();
                     temp.push_back(parent->val);
                     q.pop();
-
                     if(parent->left){q.push(parent->left);}
                     if(parent->right){q.push(parent->right);}
                 }
