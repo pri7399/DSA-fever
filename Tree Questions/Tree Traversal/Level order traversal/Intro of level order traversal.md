@@ -17,8 +17,9 @@ Breadth-First Search (BFS) explores nodes level by level, making it the natural 
     Continue this process until all nodes have been processed.
 
 Code:(LC 102)
+   
     `class Solution {
-    public:
+     public:
         vector<vector<int>> ans;
         vector<vector<int>> levelOrder(TreeNode* root) {
             if(root==NULL) return(ans);
@@ -39,8 +40,7 @@ Code:(LC 102)
             }
             return ans;      
         }
-    };
-`
+    };`
 
 ## B  F   S 
 
