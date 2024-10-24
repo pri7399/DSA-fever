@@ -1,13 +1,13 @@
 Level order traversal involves visiting nodes of a binary tree level by level, from left to right.
 
-###  B  F   S 
+#  B  F   S 
 
 BFS method is preferred for level order traversal as it aligns with level order traversal goal that is to  explores nodes level by level, from left to right. Although it is not typically suggested to implement it using Depth-First Search (DFS), but it can be done with DFS also by keeping track of levels explicitly
 
 ## BFS:
 Breadth-First Search (BFS) explores nodes level by level, making it the natural fit for level order traversal. It uses a queue to manage the nodes.
 
-# BFS Algorithm:
+### BFS Algorithm:
 
     Initialize a queue and enqueue the root node.
     While the queue is not empty:
@@ -16,7 +16,7 @@ Breadth-First Search (BFS) explores nodes level by level, making it the natural 
         Enqueue its left and right children (if they exist).
     Continue this process until all nodes have been processed.
 
-# Code:(LC 102)
+### Code:(LC 102)
    
     `class Solution {
      public:
@@ -41,7 +41,7 @@ Breadth-First Search (BFS) explores nodes level by level, making it the natural 
         }
     };`
 *Question mostly BFS se he solve honge. Keep in mind DFS only for exceptional cases.*
-# Question based on BFS level order traversal:
+## Question based on BFS level order traversal:
 Here is the consolidated list of **LeetCode problems based on level order traversal** in a table format:
 
 | **No.** | **Problem Name**                                         | **Description**                                                                     | **Link**                                                                                      |
@@ -59,16 +59,16 @@ Here is the consolidated list of **LeetCode problems based on level order traver
 | 11     | N-ary Tree Level Order Traversal                         | Return the level order traversal of an N-ary tree.                                   | [Link](https://leetcode.com/problems/n-ary-tree-level-order-traversal/)                      |
 | 12     | Symmetric Tree                                           | Check if a tree is symmetric around its center.                                      | [Link](https://leetcode.com/problems/symmetric-tree/)                                        |
 
-This table provides a clear view of popular **level order traversal**-based problems on LeetCode along with their descriptions and links to each problem.
 
 
 
-#### D  F   S 
 
-### DFS:(Never use, agar interview mai speciafically pucha tavi use krna)
+# D  F   S 
+
+## DFS:(Never use, agar interview mai speciafically pucha tavi use krna)
 we can implement level order traversal using a Depth-First Search (DFS) approach by explicitly tracking the depth (or level) of the tree during the recursive traversal.
 
-# CODE:
+### CODE:
     `void dfs(TreeNode* node, int level, vector<vector<int>>& result) {
         if (!node) return;
 
@@ -93,8 +93,8 @@ we can implement level order traversal using a Depth-First Search (DFS) approach
         return result;
     }`
 
-# EXPLANATION:
-> Base Case: 
+### EXPLANATION:
+Base Case: 
     If the current node is nullptr, return immediately (this happens when you try to access a non-existent left or right child).
 Process Current Node:
     If the current depth equals the size of the result vector (i.e., you are visiting a new level for the first time), append a new empty vector for this level.
