@@ -1,6 +1,6 @@
-Level order traversal involves visiting nodes of a binary tree level by level, from left to right.
+# Level order traversal involves visiting nodes of a binary tree level by level, from left to right.
 
-#  B  F   S 
+##  B  F   S 
 
 BFS method is preferred for level order traversal as it aligns with level order traversal goal that is to  explores nodes level by level, from left to right. Although it is not typically suggested to implement it using Depth-First Search (DFS), but it can be done with DFS also by keeping track of levels explicitly
 
@@ -64,7 +64,7 @@ Here is the consolidated list of **LeetCode problems based on level order traver
 
 
 
-# D  F   S 
+## D  F   S 
 
 ## DFS:(Never use, agar interview mai speciafically pucha tavi use krna)
 we can implement level order traversal using a Depth-First Search (DFS) approach by explicitly tracking the depth (or level) of the tree during the recursive traversal.
