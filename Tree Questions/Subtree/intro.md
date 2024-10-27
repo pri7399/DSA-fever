@@ -6,18 +6,18 @@
 #### Example:
 Consider this tree:
 
-       A
+`       A
       / \
      B   C
     / \
-   D   E
-   
+   D   E`
+
 > The subtree rooted at B would consist of the node B and all its descendants (D and E), forming the structure:
 
-   B
+`   B
   / \
  D   E
-
+`
 > The subtree rooted at A is the entire tree itself:
 
          A
