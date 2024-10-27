@@ -27,3 +27,15 @@ Consider this tree:
      D   E
 
 ### Each node can be the root of a subtree, which includes everything from that node downward in the original tree structure.
+
+Here is a list of subtree-related problems on LeetCode:
+
+| Problem Name                                      | Description                                                                             | Link                                                                                   |
+|---------------------------------------------------|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| Subtree of Another Tree                           | Check if a binary tree is a subtree of another tree.                                    | [Link](https://leetcode.com/problems/subtree-of-another-tree/)                         |
+| Find Duplicate Subtrees                           | Find all duplicate subtrees in a binary tree.                                           | [Link](https://leetcode.com/problems/find-duplicate-subtrees/)                         |
+| Smallest Subtree with All the Deepest Nodes       | Find the smallest subtree containing all the deepest nodes in a binary tree.            | [Link](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)      |
+| Count Nodes Equal to Average of Subtree           | Count nodes equal to the average value of their subtree.                                | [Link](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/)         |
+| Most Frequent Subtree Sum                         | Find the most frequent subtree sum in a binary tree.                                    | [Link](https://leetcode.com/problems/most-frequent-subtree-sum/)                       |
+| Maximum Average Subtree                           | Calculate the maximum average value among all subtrees.                                 | [Link](https://leetcode.com/problems/maximum-average-subtree/)                         |
+| Count Univalue Subtrees                           | Count the number of univalue subtrees in a binary tree (where all nodes have the same value). | [Link](https://leetcode.com/problems/count-univalue-subtrees/)                     |
