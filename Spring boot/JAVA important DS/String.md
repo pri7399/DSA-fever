@@ -141,3 +141,59 @@ Here’s a breakdown of each class and the differences between them:
   - You need **thread safety** and are working in a **multi-threaded environment**.
   
 Both `StringBuilder` and `StringBuffer` provide efficient options for building and modifying strings, with the choice depending mainly on whether thread safety is a requirement.
+
+## Synchronized vs. Non-Synchronized Code
+
+In Java, **non-synchronized** means that a method or block of code is not protected from concurrent access by multiple threads. In simpler terms, it means that **multiple threads can access and modify the resource (like an object or variable) at the same time without waiting for one another**. This can lead to inconsistencies or unexpected behavior if the code modifies shared data, as changes made by one thread might conflict with changes made by another.
+
+- **Synchronized Code**: When a method or block is synchronized, Java ensures that only one thread can access it at a time. This is often done using the `synchronized` keyword. Synchronized methods or blocks make the code **thread-safe** but can slow down performance, especially when multiple threads need access.
+  
+- **Non-Synchronized Code**: Non-synchronized code allows multiple threads to access and modify data simultaneously. This can improve performance since threads don’t have to wait on each other, but it may cause issues in a multi-threaded environment if the code modifies shared resources.
+
+### Example: Synchronized vs. Non-Synchronized
+
+Imagine a counter that is shared among multiple threads. Here’s a simplified example:
+
+#### Non-Synchronized Version
+If two threads increment the counter without synchronization, they may overwrite each other’s changes:
+
+```java
+public class Counter {
+    private int count = 0;
+
+    public void increment() {
+        count = count + 1; // Non-synchronized increment
+    }
+
+    public int getCount() {
+        return count;
+    }
+}
+```
+
+In this case, if two threads run `increment()` simultaneously, they could each read the same initial `count` value, update it, and overwrite each other’s result, causing errors.
+
+#### Synchronized Version
+Using `synchronized` ensures only one thread can access `increment()` at a time, making it thread-safe:
+
+```java
+public class Counter {
+    private int count = 0;
+
+    public synchronized void increment() {
+        count = count + 1; // Synchronized increment
+    }
+
+    public int getCount() {
+        return count;
+    }
+}
+```
+
+Here, only one thread at a time can run `increment()`, preventing inconsistent updates to `count`.
+
+### In `StringBuilder` vs. `StringBuffer`
+- **StringBuilder** is **non-synchronized** because it is designed for single-threaded use, where performance is prioritized over thread safety.
+- **StringBuffer** is **synchronized** so that it can be used safely across multiple threads, though it is slightly slower due to this synchronization.
+
+So, **non-synchronized code is faster** but should only be used where thread safety is not a concern, such as in single-threaded environments.
