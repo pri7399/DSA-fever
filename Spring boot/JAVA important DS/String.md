@@ -78,3 +78,66 @@
    - For **mutable strings**, use `StringBuilder` or `StringBuffer`.
    - **StringBuilder**: Fast but not thread-safe.
    - **StringBuffer**: Thread-safe, with synchronized methods, but slower than `StringBuilder`.
+
+`StringBuilder` and `StringBuffer` in Java are classes used for creating and manipulating **mutable sequences of characters**. Unlike `String`, which is immutable (cannot be changed once created), both `StringBuilder` and `StringBuffer` allow for modification without creating a new object each time, making them more efficient for scenarios that involve frequent string modifications.
+
+Here’s a breakdown of each class and the differences between them:
+
+---
+
+### 1. **StringBuilder**
+   - **Introduction**: `StringBuilder` was introduced in Java 5 as a more efficient, non-synchronized alternative to `StringBuffer`.
+   - **Mutability**: It is mutable, allowing modification of the character sequence without creating new objects.
+   - **Thread Safety**: `StringBuilder` is **not thread-safe**, meaning it does not synchronize its methods. This makes it faster than `StringBuffer` in single-threaded scenarios, but it should not be used in multithreaded environments without additional synchronization.
+   - **Performance**: Faster than `StringBuffer` in single-threaded applications because of the lack of synchronization.
+   - **Usage**:
+     - Suitable for cases where you need to modify a string frequently within a single thread.
+     - Common operations like `append()`, `insert()`, `delete()`, and `reverse()` are available.
+     
+   - **Example**:
+     ```java
+     StringBuilder sb = new StringBuilder("Hello");
+     sb.append(" World");               // Now sb contains "Hello World"
+     sb.insert(5, ",");                 // Inserts a comma after "Hello" -> "Hello, World"
+     sb.reverse();                      // Reverses the string -> "dlroW ,olleH"
+     System.out.println(sb.toString()); // Output: "dlroW ,olleH"
+     ```
+
+---
+
+### 2. **StringBuffer**
+   - **Introduction**: `StringBuffer` has been available since Java 1.0 and was designed to be thread-safe for string manipulation.
+   - **Mutability**: Like `StringBuilder`, `StringBuffer` is also mutable.
+   - **Thread Safety**: `StringBuffer` is **thread-safe**, meaning its methods are synchronized to prevent concurrent modifications. This makes it suitable for use in multithreaded environments where multiple threads may modify the same `StringBuffer` instance.
+   - **Performance**: Slightly slower than `StringBuilder` because of the added synchronization overhead, but safer for concurrent use.
+   - **Usage**:
+     - Recommended for cases where you need mutable strings in a multithreaded context.
+     - Supports the same methods as `StringBuilder` for appending, inserting, deleting, and reversing strings.
+     
+   - **Example**:
+     ```java
+     StringBuffer sb = new StringBuffer("Hello");
+     sb.append(" World");               // Now sb contains "Hello World"
+     sb.insert(5, ",");                 // Inserts a comma after "Hello" -> "Hello, World"
+     sb.reverse();                      // Reverses the string -> "dlroW ,olleH"
+     System.out.println(sb.toString()); // Output: "dlroW ,olleH"
+     ```
+
+---
+
+### **Key Differences Between StringBuilder and StringBuffer**
+   | Feature            | StringBuilder       | StringBuffer        |
+   |--------------------|---------------------|---------------------|
+   | **Thread Safety**  | Not thread-safe     | Thread-safe        |
+   | **Performance**    | Faster in single-threaded applications | Slower due to synchronization |
+   | **Usage**          | Single-threaded applications | Multi-threaded applications |
+   | **Introduced In**  | Java 5              | Java 1.0           |
+
+### **When to Use Which?**
+- **Use `StringBuilder`** if:
+  - You’re working in a **single-threaded environment**.
+  - Performance is a concern, and thread safety is not required.
+- **Use `StringBuffer`** if:
+  - You need **thread safety** and are working in a **multi-threaded environment**.
+  
+Both `StringBuilder` and `StringBuffer` provide efficient options for building and modifying strings, with the choice depending mainly on whether thread safety is a requirement.
