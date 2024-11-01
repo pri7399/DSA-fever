@@ -197,3 +197,24 @@ Here, only one thread at a time can run `increment()`, preventing inconsistent u
 - **StringBuffer** is **synchronized** so that it can be used safely across multiple threads, though it is slightly slower due to this synchronization.
 
 So, **non-synchronized code is faster** but should only be used where thread safety is not a concern, such as in single-threaded environments.
+
+# `String` in Java vs. `string` in C++:
+
+### String in Java
+- **Immutability**: Strings are immutable; modifications create new `String` objects.
+- **Memory Management**: Managed by garbage collection; uses a String Pool for identical literals.
+- **Concatenation**: Uses `+` operator or `StringBuilder` for performance.
+- **Thread Safety**: Not inherently thread-safe; use `StringBuffer` for synchronized operations.
+- **Performance**: Less efficient for modifications due to immutability.
+- **Functionality**: Rich set of built-in methods (e.g., `substring()`, `indexOf()`).
+- **Standard Library Support**: Part of the core Java API.
+
+### String in C++
+- **Mutability**: Strings are mutable; modifications change the existing object.
+- **Memory Management**: Requires manual management; `std::string` handles allocation/deallocation automatically.
+- **Concatenation**: Uses `+` operator for efficient string manipulation.
+- **Thread Safety**: Not thread-safe; developers must implement synchronization.
+- **Performance**: More efficient for modifications due to mutability.
+- **Functionality**: Provides various methods (e.g., `substr()`, `find()`).
+- **Standard Library Support**: Part of the C++ Standard Library.
+
