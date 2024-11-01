@@ -51,10 +51,10 @@
      ```
 
 ### 7. **Common Array Properties and Methods**
-   - **Length**: The property `.length` gives the size of the array.
+   **Length**: The property `.length` gives the size of the array.
      ```java
-    int arraySize = numbers.length;
-    ```
+     int arraySize = numbers.length;
+     ```
     
     Although arrays in Java do not have built-in methods (like those found in classes such as `ArrayList`), the Java `Arrays` utility class in `java.util` provides many helpful methods for array manipulation.
 
