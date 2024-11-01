@@ -1,5 +1,5 @@
 ## A subtree of node in a tree is a tree consisting of node and all of its descendants.
-### >  --> All nodes that can be reached by traversing downwards from that node.
+### >  All nodes that can be reached by traversing downwards from that node.
 
 ### The subtree rooted at a node includes the entire structure beneath that node, preserving the original connections and hierarchy within the tree.
 
