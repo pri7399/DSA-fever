@@ -4,9 +4,6 @@ The **Collections Framework** in Java provides a unified architecture for handli
 
 [Collection framework in 1 vedio yt](https://www.youtube.com/watch?v=rzA7UJ-hQn4)
 
-![Collection heirarchy](hierarchy-of-collection-framework.jpg)
-
-
 Java collections make development faster and more efficient, providing well-optimized, ready-made data structures that simplify coding and improve performance and scalability. 
 
 ### Key Components of the Collections Framework
@@ -16,6 +13,8 @@ The Collections Framework is primarily composed of:
 1. **Interfaces**: Abstract data types that represent collections. Common interfaces include `List`, `Set`, `Queue`, and `Map`.
 2. **Implementations (Classes)**: Concrete classes that implement the collection interfaces, providing specific functionalities like `ArrayList`, `HashSet`, and `HashMap`.
 3. **Algorithms**: Useful methods for performing operations on collections, such as sorting and searching, usually implemented as static methods in the `Collections` class.
+
+![Collections framework](image.png)
 
     The **Java Collection Framework** is a comprehensive architecture to manage a group of objects in Java, providing interfaces, classes, and algorithms to handle and manipulate collections efficiently. Here's a breakdown:
 
@@ -71,6 +70,8 @@ The Collections Framework is primarily composed of:
 
     The Java Collection Framework is versatile, providing powerful, reusable data structures and algorithms to simplify programming tasks. By offering standardized, high-performance implementations of widely used data structures, the framework allows developers to focus more on business logic than on implementation details. This framework is essential in building efficient, readable, and maintainable Java applications.
 ---
+
+![Collection heirarchy](hierarchy-of-collection-framework.jpg)
 
 ### Core Interfaces in Java Collections
 
