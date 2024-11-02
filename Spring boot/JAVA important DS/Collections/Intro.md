@@ -16,21 +16,21 @@ The Collections Framework is primarily composed of:
 
 ![Collections framework](image.png)
 
-    The **Java Collection Framework** is a comprehensive architecture to manage a group of objects in Java, providing interfaces, classes, and algorithms to handle and manipulate collections efficiently. Here's a breakdown:
+The **Java Collection Framework** is a comprehensive architecture to manage a group of objects in Java, providing interfaces, classes, and algorithms to handle and manipulate collections efficiently. Here's a breakdown:
 
-    ### 1. Interfaces
+### 1. Interfaces
 
-    The core of the Java Collection Framework lies in its interfaces, which define the essential types of collections:
+The core of the Java Collection Framework lies in its interfaces, which define the essential types of collections:
 
-    - **Collection**: The root interface for most of the collection classes. It represents a group of objects, known as elements.
+ - **Collection**: The root interface for most of the collection classes. It represents a group of objects, known as elements.
 
-    - **List**: An ordered collection (or sequence) that allows duplicates. Common implementations include `ArrayList`, `LinkedList`, and `Vector`.
+- **List**: An ordered collection (or sequence) that allows duplicates. Common implementations include `ArrayList`, `LinkedList`, and `Vector`.
 
-    - **Set**: A collection that does not allow duplicate elements. Notable implementations are `HashSet`, `LinkedHashSet`, and `TreeSet`.
+- **Set**: A collection that does not allow duplicate elements. Notable implementations are `HashSet`, `LinkedHashSet`, and `TreeSet`.
 
-    - **Queue**: Represents collections designed to hold elements before processing. Important implementations include `PriorityQueue` and `ArrayDeque`.
+- **Queue**: Represents collections designed to hold elements before processing. Important implementations include `PriorityQueue` and `ArrayDeque`.
 
-    - **Map**: Not a subtype of `Collection` but part of the framework, representing key-value pairs. Important classes are `HashMap`, `LinkedHashMap`, and `TreeMap`.
+ - **Map**: Not a subtype of `Collection` but part of the framework, representing key-value pairs. Important classes are `HashMap`, `LinkedHashMap`, and `TreeMap`.
 
     Each of these interfaces may have multiple implementations, each suited to different use cases.
 
