@@ -2,11 +2,12 @@
 
 The **Collections Framework** in Java provides a unified architecture for handling groups of objects, allowing developers to store, retrieve, manipulate, and communicate aggregate data efficiently. It offers various interfaces, classes, and methods to deal with collections of data, eliminating the need to design custom data structures for standard use cases.
 
-[https://](https://www.youtube.com/watch?v=rzA7UJ-hQn4)
+[Collection framework in 1 vedio yt](https://www.youtube.com/watch?v=rzA7UJ-hQn4)
+
+![Collection heirarchy](hierarchy-of-collection-framework.jpg)
 
 
-
-
+Java collections make development faster and more efficient, providing well-optimized, ready-made data structures that simplify coding and improve performance and scalability. 
 
 ### Key Components of the Collections Framework
 
